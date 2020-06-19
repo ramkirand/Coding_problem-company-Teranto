@@ -15,7 +15,7 @@ You are supposed to use “recursive” function to achieve mixing for all three
  Author : D Rama Kiron
  */
 public class MixStrings {
-	// Time complexity O(3n)
+	// Time complexity O(n)
 	
 	public String mixedString(String str1, String str2, String str3) {
 		StringBuilder ans = new StringBuilder();
