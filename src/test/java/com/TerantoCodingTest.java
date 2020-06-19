@@ -1,10 +1,10 @@
-package com;
+ package com;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TerantoAssignmentApplicationTests {
+class TerantoCodingTest {
 
 	@Test
 	void contextLoads() {

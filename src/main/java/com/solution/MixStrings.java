@@ -12,9 +12,11 @@ Now mix all three strings to generate a new string S that is as follows
 S = P 1 Q 1 R 1 P 2 Q 2 R 2 … ……… ….. P (n-1) Q (n-1) R (n-1) P n Q n R n
 You are supposed to use “recursive” function to achieve mixing for all three string.
 
+ Author : D Rama Kiron
  */
 public class MixStrings {
-
+	// Time complexity O(3n)
+	
 	public String mixedString(String str1, String str2, String str3) {
 		StringBuilder ans = new StringBuilder();
 		if (str1 == null || str2 == null || str3 == null)
@@ -31,14 +33,16 @@ public class MixStrings {
 				ans.append(str2.charAt(i));
 			if (i < n)
 				ans.append(str3.charAt(i));
-			//ans.append("\n");
 		}
 		return ans.toString();
 	}
 
-	public static void main(String[] args) {
-		
-		//System.out.println(mixedString(str1, str2, str3));
-	}
+	// Time Complexity: O(3n)
 
+	public  void mixedStringRecursive(StringBuilder sb, String str1, String str2, String str3, int index) {
+		if (index == str1.length())
+			return;
+		sb.append(str1.charAt(index)).append(str2.charAt(index)).append(str3.charAt(index));
+		mixedStringRecursive(sb, str1, str2, str3, index + 1);
+	}
 }
