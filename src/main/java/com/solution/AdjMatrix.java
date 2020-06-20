@@ -53,7 +53,7 @@ public class AdjMatrix {
 		List<List<Integer>> res = new ArrayList<>();
 		List<Integer> tmp = new ArrayList<>();
 		tmp.add(src);
-		helper(res, tmp, graph, 1);
+		helper(res, tmp, graph, src);
 		return res;
 	}
 
